@@ -248,14 +248,7 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
     Future.delayed(Duration(milliseconds: w.duration < 100 ? 100 : w.duration))
         .then((_) {
       try {
-        if (screen is String) {
-          Navigator.of(_context).pushReplacementNamed(screen);
-        } else {
-          Navigator.of(_context).pushReplacement(PageTransition(
-              type: w.transitionType,
-              child: screen,
-              alignment: Alignment.topCenter));
-        }
+        _context.pushReplacementNamed(screen);
       } catch (msg) {
         print('AnimatedSplashScreen -> '
             'error in jump to next screen, probably '
