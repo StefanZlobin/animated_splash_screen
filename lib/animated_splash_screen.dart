@@ -2,6 +2,7 @@ library animated_splash_screen;
 
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:go_router/go_router.dart';
 
 enum SplashType { simpleSplash, backgroundScreenReturn }
 
